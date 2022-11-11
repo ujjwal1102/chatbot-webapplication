@@ -1,0 +1,133 @@
+{% extends "homepage.html" %}
+{% block content %}
+
+  <!-- Section: Design Block -->
+  <section class="text-center text-lg-start">
+    <style>
+      .cascading-right {
+        margin-right: -50px;
+      }
+
+      @media (max-width: 991.98px) {
+        .cascading-right {
+          margin-right: 0;
+        }
+      }
+    </style>
+
+
+    <!-- Jumbotron -->
+    <div class="container py-0">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-6 align-self-center  mb-lg-0">
+          <div class="card bg-transparent text-white border-0">
+            <div class="card-body px-5 text-center">
+              <h2 class="text-uppercase" style="font-size: 2em; font-family: Poiret One;">Sign up</h2>
+              <form method="POST">
+                {% csrf_token %}
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <!-- <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline form-white mb-1">
+                      {{ form.first_name }}
+                      <input type="text" id="form3Example1" class="form-control form-control-lg" />
+                      <label class="form-label mt-1" for="form3Example1">Username</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline form-white mb-1">
+                      {{ form.last_name }}
+                      <input type="text" id="form3Example2" class="form-control form-control-lg" />
+                      <label class="form-label mt-1" for="form3Example2">Last name</label>
+                    </div>
+                  </div>
+                </div> -->
+
+
+                <div class="form-outline form-white mb-2">
+                  
+                  <!-- <input type="email" id="form3Example3" class="form-control form-control-lg" /> -->
+                  <label class="form-label mt-1 log-sign-text" for="form3Example3" >Username</label>
+                  {{ form.username }}
+                </div>
+
+                <div class="form-outline form-white mb-2">
+                  
+                  <!-- <input type="email" id="form3Example3" class="form-control form-control-lg" /> -->
+                  <label class="form-label mt-1 log-sign-text" for="form3Example3" >Email address</label>
+                  {{ form.email }}
+                </div>
+
+                <div class="form-outline form-white mb-2">
+                  
+                  <!-- <input type="email" id="form3Example3" class="form-control form-control-lg" /> -->
+                  <label class="form-label mt-1 log-sign-text" for="form3Example3" >Password</label>
+                  {{ form.password1 }}
+                </div>
+
+
+                <div class="form-outline form-white mb-4">
+                  
+                  <!-- <input type="password" id="form3Example4" class="form-control form-control-lg" /> -->
+                  <label class="form-label mt-1 log-sign-text" for="form3Example4" >Confirm Password</label>
+                  {{ form.password2 }}
+                </div>
+
+
+                <!-- <div class="form-check d-flex justify-content-center mb-2">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                  <label class="form-check-label" for="form2Example33">
+                    Agree Terms And Conditions
+                  </label>
+                </div> -->
+
+                {% if form.errors %}
+                {% for field,error in form.errors.items %}
+                <div class=" alert alert-danger text-black" style="font-family: Space Mono; font-size: small;" >{{ error|striptags }}</div>
+                {% endfor %}
+                {% endif %}
+
+                <button type="submit" class="btn btn-primary btn-block mb-4 log-sign-text">
+                  Sign up
+                </button>
+              </form>
+              <div>
+                <p class="mb-0 log-sign-text" >Already have an account? <a href="{% url 'login' %}"
+                    class="text-white-50 fw-bold">Login</a>
+                </p>
+              </div>
+
+              <!-- Register buttons -->
+              <!-- <div class="text-center">
+                  <p>or sign up with:</p>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-google"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-github"></i>
+                  </button>
+                </div> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+            alt="" /> -->
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+
+{% endblock %}

@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+.nav-link {
+    color: rgb(255, 255, 255);
+}
+
+.nav-item {
+    padding-inline-start: 10px;
+    color: #FFFFFF;
+    font-family: Poiret One;
+    /* font-weight: bolder; */
+
+}
+
+.nav-link a:active {
+    color: white;
+}
+
+
+.nav-item a:hover {
+    color: rgb(251, 252, 252);
+    font-weight: bolder;
+}
+
+.container-fluid {
+    background-color: #010d26;
+}
+
+body {
+    height: 100%;
+    /* min-height: 100%; */
+    width: 100%;
+    background:
+        linear-gradient(129.96deg, #FF2F2F 10.43%, #000460 92.78%),
+        radial-gradient(100% 246.94% at 100% 0%, #FFFFFF 0%, #020063 100%),
+        linear-gradient(58.72deg, #2713ab 0%, #530000 100%),
+        linear-gradient(154.03deg, #B70000 0%, #FF003D 74.04%),
+        linear-gradient(341.1deg, #FF0000 7.52%, #0038FF 77.98%),
+        linear-gradient(136.23deg, #00C2FF 11.12%, #FF0000 86.47%),
+        radial-gradient(57.37% 100% at 50% 0%, #B50000 0%, #0034BB 100%);
+    background-blend-mode: overlay, color-burn, screen, overlay, difference, difference, normal;
+    background-size: 400% 400%;
+    animation: gradient-anim 15s ease-in-out infinite;
+
+}
+
+
+a {
+
+    text-decoration: none;
+}
+
+@keyframes gradient-anim {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* section {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      display: flex;
+    }
+    
+
+    section:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 500px;
+      background: linear-gradient(45deg, #0b7abf, #16caf2, #1bf2f2);
+      border-radius: 0 0 50% 50%/0 0 100% 100%;
+      transform: scaleX(1.5);
+    } */
+
+
+/* section .content {
+
+      position: relative;
+      z-index: 1;
+      margin: 0 auto;
+      max-width: 900px;
+      text-align: center;
+    } */
+
+.text-anim {
+    background:
+        linear-gradient(0deg, #000000 0%, #f7f7f7 100%),
+        linear-gradient(90deg, red, yellow, lime, cyan, blue, red);
+    background-blend-mode: color-dodge, normal;
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-anim 20s ease-in-out infinite;
+}
+
+.head-txt {
+    font-size: clamp(4em, 3vw, 4.5em);
+    font-family: Poiret One;
+}
+
+.para-txt {
+    font-size: .75em;
+    font-family: Space Mono;
+}
+
+.log-sign-text {
+    font-size: .85em;
+    font-family: Space Mono;
+}
+
+.btn {
+    border: 1px solid #3498db;
+    background: none;
+    font-family: Space Mono;
+    font-size: .75em;
+    color: #3498db;
+
+}
+
+.btn:hover {
+    background: #3498db;
+    color: #000460;
+    font: 100;
+
+}
+
+.card-title {
+    font-family: Poppins;
+    font-weight: bolder;
+}
+
+.card-text {
+    font-family: Quicksand;
+}
+
+.dropdown-menu {
+    color: #fff;
+    border: none;
+    background: transparent;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.dropdown-item:hover {
+    background: transparent;
+
+}
+
+/* .errorlist{
+      list-style: none;
+    } */

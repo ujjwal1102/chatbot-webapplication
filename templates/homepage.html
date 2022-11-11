@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block content %}
+  {% if user.is_authenticated %}
+
+    <div class="container">
+
+      <div class="row d-flex justify-content-center mt-4 text-center">
+
+        <div class=" d-flex justify-content-center">
+
+          <!-- <a class="btn btn-primary mx-1 pt-2 my-2" href="#">Logout</a> -->
+
+        </div>
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10 col-lg-8 col-xl-6">
+            <div class="card">
+              <div class="card-body" style="background: transparent; border-radius: 3px;">
+                <h1 class="card-title mt-2">Hello {{ user.username }}</h1>
+                <p class="card-text mt-4" >
+                  I'm a Generative chatbot, trained on Cornell Movie – Dialogs Corpus Dataset.
+
+                  Generative chatbots is the combination of supervised learning, unsupervised learning, reinforcement learning, and adversarial learning for multi-step training.
+                  
+                  Wait a second when you start chat,Chatbot is being ready.
+                </p>
+
+                <a class = "btn btn-primary mx-1 pt-2 mt-5" href="{% url 'chatbot' %}">Chat with the Chatbot</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    {% else %}
+    <section>
+      <div class="container content">
+        <div class=" d-flex align-items-center justify-content-center" style="height: 84.2vh; width: 100%;">
+          <div class="col">
+            <h1 class="text-center text-anim head-txt">CHANGE THE WORLD</h1>
+            <p class="text-center text-anim para-txt">With Deep Learning And Machine Learning Concepts</p>
+
+            <div class="d-flex align-items-center justify-content-center">
+              <a class="btn btn-primary mx-1" href="{% url 'login' %}">Login</a>
+              <br>
+              <a class="btn btn-primary mx-1" href="{% url 'signup' %}">Sign Up</a>
+            </div>
+
+            <!-- </div> -->
+          </div>
+        </div>
+    </section>
+    {% endif %}
+  </div>
+
+{% endblock %}
