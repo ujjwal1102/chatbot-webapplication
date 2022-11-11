@@ -1,6 +1,5 @@
 numpy
 tensorflow
 django
-keras
 db-sqlite
 pickle
