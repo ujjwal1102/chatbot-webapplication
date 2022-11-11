@@ -1,5 +1,4 @@
 numpy
-pandas
-tensorflow=2.5.0
-django=4.0.3
+tensorflow==2.5.0
+django==4.0.3
 keras
