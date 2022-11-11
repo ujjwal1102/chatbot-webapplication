@@ -3,3 +3,4 @@ tensorflow
 django
 db-sqlite3
 pickle5
+channels
