@@ -1,4 +1,4 @@
-tensorflow-cpu==2.6.0
+tensorflow-cpu==
 django
 db-sqlite3
 channels
